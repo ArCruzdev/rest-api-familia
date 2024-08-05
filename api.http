@@ -1,0 +1,27 @@
+GET http://localhost:3000/api/info
+
+###
+GET http://localhost:3000/api/info?integrante=santiago
+
+###
+POST http://localhost:3000/api/info/sofia HTTP/1.1
+Content-Type: application/json
+
+{
+    "id" : 6,
+    "titulo" : "cabello suelto",
+    "fecha" : "2023/01/29",
+    "ubicacion" : "casa",
+    "foto" : "./assets/sofia6.jpg",
+    "impresiones" : "estaba haciendo mucho frio pero con la diversion se me paso"
+}
+
+###
+PATCH http://localhost:3000/api/info/sofia/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "ubicacion" : "FINCA",
+    "foto" : "./assets/sofia6.jpg",
+    "impresiones" : "estaba haciendo mucho frio pero con la diversion se me paso"
+}
